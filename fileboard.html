@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파일관리시스템</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .post {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        .post h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .post p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .post .author {
+            font-style: italic;
+        }
+        
+        .post .date {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .post .content {
+            margin-top: 10px;
+        }
+        
+        .file-upload {
+            margin-top: 20px;
+        }
+        
+        .file-upload input[type="file"] {
+            display: none;
+        }
+        
+        .file-upload label {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .file-upload label:hover {
+            background-color: #45a049;
+        }
+        
+        .file-download {
+            margin-top: 10px;
+        }
+        
+        .file-download a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #f44336;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        
+        .file-download a:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>데이터 파일 목록</h1>
+    </div>
+    
+    <div id="content">
+        <div class="post">
+            <h2>첫 번째 게시물</h2>
+            <p class="author">작성자: 소프트웨어공학과 임형지</p>
+            <p class="date">작성일: 2023년 6월 15일</p>
+            <div class="content">
+                <p> CIP동아리 - 라이프세이버 데이터수집 </div>
+            <div class="file-upload">
+                <input type="file" id="file-upload-1">
+                <label for="file-upload-1">파일 업로드</label>
+            </div>
+            <div class="file-download">
+                <a href="파일1의_경로" download>파일1 다운로드</a>
+                <a href="파일2의_경로" download>파일2 다운로드</a>
+            </div>
+        </div>
+        
+        <div class="post">
+            <h2>두 번째 게시물</h2>
+            <p class="author">작성자: 소프트웨어공학과 임형지</p>
+            <p class="date">작성일: 2023년 6월 18일</p>
+            <div class="content">
+                <p>CIP동아리 - 알리미 데이터수집  </div>
+            <div class="file-upload">
+                <input type="file" id="file-upload-2">
+                <label for="file-upload-2">파일 업로드</label>
+            </div>
+            <div class="file-download">
+                <a href="파일3의_경로" download>파일3 다운로드</a>
+                <a href="파일4의_경로" download>파일4 다운로드</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

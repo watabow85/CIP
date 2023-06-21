@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>CIP</title>
     <style>
         body {
@@ -75,11 +76,11 @@
 <marginwidth="50px">
     <div class="form-group input">
         <label for="username">ID</label>
-        <input type="text" id="username" name="username" placeholder="ID를 입력하세요">
+        <input id = "id" type="text" id="username" name="username" placeholder="ID를 입력하세요">
       </div>
       <div class="form-group input">
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="PASSWORD를 입력하세요">
+        <input id = "psword" type="password" id="password" name="password" placeholder="PASSWORD를 입력하세요">
 </div>
 <div class="form-group">
     <button type="submit">Login</button>
@@ -93,6 +94,35 @@
         <a title="Link" href = "https://www.jnu.ac.kr">전남대학교</a>
        
     </div>
-
+    <!-- <script src="/cip/public/login.js" defer> -->
+<script>
+        const id = document.querySelector("#id"),
+        psword = document.querySelector("#psword"),
+        loginBtn = document.querySelector("button");
+    
+        function login() {
+          const req = {
+            id : id.value,
+            psword : psword.value,
+          };
+      console.log(req);
+      console.log(JSON.stringify(req));
+      fetch("/login",{
+        method: "POST",
+        headers : {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(req)
+      }).then((res) => console.log(res.json()))
+      .then((res) => console.log(res));
+      console.log("bye");
+          }
+          loginBtn.addEventListener("click", login);
+            console.log(id);
+            console.log("hello");
+    </script>
 </body>
+<!-- <script>    -->
+   
+  
 </html>
